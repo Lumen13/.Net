@@ -4204,11 +4204,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\TechAtHome\\TechAtHome.csproj",
+      "projectUniqueName": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\Net\\TechAtHome\\TechAtHome.csproj",
       "projectName": "TechAtHome",
-      "projectPath": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\TechAtHome\\TechAtHome.csproj",
+      "projectPath": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\Net\\TechAtHome\\TechAtHome.csproj",
       "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\TechAtHome\\obj\\",
+      "outputPath": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\Net\\TechAtHome\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",

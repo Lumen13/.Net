@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NpzJFRFt1QH6qANx9ex6gN1MH5YGhMOl2esHTfNnTptBB8gVnbPHJ22J8TAeCpTIr6X9q6SXnzlLMpDNaOMZvQ==",
+  "dgSpecHash": "NhA4MAntwSp3YbbvD7Doje2h/H3GiD0NKYb44CkywBsG2WupoikTmiABHC1pPOyyururc6mUEZSxLGYqbyJjQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\TechAtHome\\TechAtHome.csproj",
+  "projectFilePath": "C:\\Users\\Andrei\\Documents\\Visual Studio 2019\\Net\\TechAtHome\\TechAtHome.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andrei\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Andrei\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
