@@ -9,16 +9,16 @@ namespace TechAtHome.Data.Mocks
 {
     public class MockCategory : ICategory
     {
-        public IEnumerable<Category> AllCategories
+        public IEnumerable<CategoryModel> AllCategoriesInterface
         {
             get
             {
-                return new List<Category>
+                return new List<CategoryModel>
                 {
-                    new Category { CategoryName = "Стационарные ПК", Spec = "Универсальные полноценные компьютеры" },
-                    new Category { CategoryName = "Ноутбуки", Spec = "Более компактные, удобные и дорогие компьютеры"},
-                    new Category { CategoryName = "Смартфоны", Spec = "Многофункциональные умные телефоны"},
-                    new Category { CategoryName = "Планшеты", Spec = "Сенсорный планшетный компьютер. Чуть больше смартфона"}
+                    new CategoryModel { CategoryName = "Стационарные ПК", Specification = "Универсальные полноценные компьютеры" },
+                    new CategoryModel { CategoryName = "Ноутбуки", Specification = "Более компактные, удобные и дорогие компьютеры"},
+                    new CategoryModel { CategoryName = "Смартфоны", Specification = "Многофункциональные умные телефоны"},
+                    new CategoryModel { CategoryName = "Планшеты", Specification = "Сенсорный планшетный компьютер. Чуть больше смартфона"}
                 };
             }
         }

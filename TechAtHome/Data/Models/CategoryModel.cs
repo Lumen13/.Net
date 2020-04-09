@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace TechAtHome.Data.Models
 {
-    public class Category
+    public class CategoryModel
     {
         public int ID { set; get; }
         public string CategoryName { get; set; }
-        public string Spec { get; set; }
-        public List<Good> PCs { get; set; }        
+        public string Specification { get; set; }
+        public List<GoodModel> PCs { get; set; }        
     }
 }

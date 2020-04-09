@@ -10,13 +10,13 @@ namespace TechAtHome.Data.Mocks
     public class MockGoods : IGoods
     {
         private readonly ICategory _Category = new MockCategory();
-        public IEnumerable<Good> Goods
+        public IEnumerable<GoodModel> GoodsInterface
         {
             get
             {
-                return new List<Good>
+                return new List<GoodModel>
                 {
-                    new Good 
+                    new GoodModel 
                     {
                         Name = "DEXP",
                         ShortSpec = "",
@@ -25,9 +25,9 @@ namespace TechAtHome.Data.Mocks
                         Price = 30000,
                         IsFavour = true,
                         Available = true,
-                        Category = _Category.AllCategories.ElementAt(0)
+                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(0)
                     },
-                    new Good
+                    new GoodModel
                     {
                         Name = "Acer AspireC20",
                         ShortSpec = "",
@@ -36,9 +36,9 @@ namespace TechAtHome.Data.Mocks
                         Price = 25000,
                         IsFavour = true,
                         Available = true,
-                        Category = _Category.AllCategories.ElementAt(1)
+                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(1)
                     },
-                    new Good
+                    new GoodModel
                     {
                         Name = "Samsung s10",
                         ShortSpec = "",
@@ -47,9 +47,9 @@ namespace TechAtHome.Data.Mocks
                         Price = 70000,
                         IsFavour = false,
                         Available = true,
-                        Category = _Category.AllCategories.ElementAt(2)
+                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(2)
                     },
-                    new Good
+                    new GoodModel
                     {
                         Name = "Samsung Galaxy Tab A10",
                         ShortSpec = "",
@@ -58,14 +58,14 @@ namespace TechAtHome.Data.Mocks
                         Price = 20000,
                         IsFavour = true,
                         Available = true,
-                        Category = _Category.AllCategories.ElementAt(3)
+                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(3)
                     }
                 };
             }
         }
-        public IEnumerable<Good> GetFavPCs { get; set; }
+        public IEnumerable<GoodModel> GetFavPCsInterface { get; set; }
 
-        public Good GetObjectPC(int PC_ID)
+        public GoodModel GetObjectPC(int PC_ID)
         {
             throw new NotImplementedException();
         }

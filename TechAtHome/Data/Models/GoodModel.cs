@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TechAtHome.Data.Models
 {
-    public class Good
+    public class GoodModel
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -15,7 +15,7 @@ namespace TechAtHome.Data.Models
         public decimal Price { get; set; }
         public bool IsFavour { get; set; }
         public bool Available { get; set; }
-        public int CategoryID { get; set; }             // 1 or 2 (ElectroCar or PatrolCar)
-        public Category Category { get; set; }
+        public int CategoryNum { get; set; }             // 1 or 2 (ElectroCar or PatrolCar)
+        public CategoryModel CategoryVariable { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace TechAtHome.Data.Interfaces
 {
     public interface ICategory
     {
-        IEnumerable<Category> AllCategories { get; }
+        IEnumerable<CategoryModel> AllCategoriesInterface { get; }
     }
 }
