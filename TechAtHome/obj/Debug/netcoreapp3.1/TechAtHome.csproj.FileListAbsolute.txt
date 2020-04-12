@@ -180,3 +180,4 @@ C:\Users\Andrei\Documents\Visual Studio 2019\Net\TechAtHome\obj\Debug\netcoreapp
 C:\Users\Andrei\Documents\Visual Studio 2019\Net\TechAtHome\obj\Debug\netcoreapp3.1\TechAtHome.csproj.CoreCompileInputs.cache
 C:\Users\Andrei\Documents\Visual Studio 2019\Net\TechAtHome\obj\Debug\netcoreapp3.1\TechAtHome.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Andrei\Documents\Visual Studio 2019\Net\TechAtHome\obj\Debug\netcoreapp3.1\Razor\Views\ShopCart\Index.cshtml.g.cs
+C:\Users\Andrei\Documents\Visual Studio 2019\Net\TechAtHome\obj\Debug\netcoreapp3.1\TechAtHome.csprojAssemblyReference.cache

@@ -10,8 +10,8 @@ using TechAtHome.Data;
 namespace TechAtHome.Migrations
 {
     [DbContext(typeof(AppDBContent))]
-    [Migration("20200412095412_ShopCart")]
-    partial class ShopCart
+    [Migration("20200412160559_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
