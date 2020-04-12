@@ -21,44 +21,44 @@ namespace TechAtHome.Data.Mocks
                         Name = "DEXP",
                         ShortSpec = "",
                         LongSpec = "",
-                        Img = "",
+                        Img = "/img/0_0.jpg",
                         Price = 30000,
                         IsFavour = true,
                         Available = true,
-                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(0)
+                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(0)
                     },
                     new GoodModel
                     {
                         Name = "Acer AspireC20",
                         ShortSpec = "",
                         LongSpec = "",
-                        Img = "",
+                        Img = "/img/1_0.jpg",
                         Price = 25000,
                         IsFavour = true,
                         Available = true,
-                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(1)
+                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(1)
                     },
                     new GoodModel
                     {
                         Name = "Samsung s10",
                         ShortSpec = "",
                         LongSpec = "",
-                        Img = "",
+                        Img = "/img/2_0.jpg",
                         Price = 70000,
                         IsFavour = false,
                         Available = true,
-                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(2)
+                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(2)
                     },
                     new GoodModel
                     {
                         Name = "Samsung Galaxy Tab A10",
                         ShortSpec = "",
                         LongSpec = "",
-                        Img = "",
+                        Img = "/img/3_0.jpg",
                         Price = 20000,
                         IsFavour = true,
                         Available = true,
-                        CategoryVariable = _Category.AllCategoriesInterface.ElementAt(3)
+                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(3)
                     }
                 };
             }

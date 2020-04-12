@@ -16,6 +16,6 @@ namespace TechAtHome.Data.Models
         public bool IsFavour { get; set; }
         public bool Available { get; set; }
         public int CategoryNum { get; set; }             // 1 or 2 (ElectroCar or PatrolCar)
-        public CategoryModel CategoryVariable { get; set; }
+        public CategoryModel GoodModel_List { get; set; }
     }
 }

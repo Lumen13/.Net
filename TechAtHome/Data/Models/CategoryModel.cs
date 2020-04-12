@@ -10,6 +10,6 @@ namespace TechAtHome.Data.Models
         public int ID { set; get; }
         public string CategoryName { get; set; }
         public string Specification { get; set; }
-        public List<GoodModel> PCs { get; set; }        
+        public List<GoodModel> CategoryModel_List { get; set; }        
     }
 }

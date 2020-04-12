@@ -9,7 +9,7 @@ namespace TechAtHome.Data.Interfaces
     public interface IGoods
     {
         IEnumerable<GoodModel> GoodsInterface { get; }
-        IEnumerable<GoodModel> GetFavPCsInterface { get; set; }
-        GoodModel GetObjectPC(int PC_ID);
+        IEnumerable<GoodModel> GetFavPCsInterface { get;}
+        GoodModel GetObjectPC(int Good_ID);
     }
 }

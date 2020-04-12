@@ -1,11 +1,10 @@
 ﻿<h1>Все товары</h1>
 <h3>@Model.CurrCategory</h3>
-@{ 
-    foreach(var good in Model.GetAllGoods)
-    {
-        <div>
-            <h2>Модель: @good.Name</h2>
-            <p>Цена: @good.Price.ToString("c")</p>
-        </div>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (GoodModel good in Model.GetAllGoods)
+        {
+            @Html.Partial("_AllGoods", good)
+        }
     }
-}
+</div>
