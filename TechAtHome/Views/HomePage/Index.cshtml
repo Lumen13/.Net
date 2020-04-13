@@ -1,0 +1,11 @@
+﻿@model HomePageWorkModel
+
+<h1>Лучшие товары</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (GoodModel good in Model.FavGoods)
+        {
+            @Html.Partial("_AllGoods", good)
+        }
+    }
+</div>

@@ -10,7 +10,7 @@ using TechAtHome.Data;
 namespace TechAtHome.Migrations
 {
     [DbContext(typeof(AppDBContent))]
-    [Migration("20200412160559_Initial")]
+    [Migration("20200413085105_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
