@@ -47,7 +47,7 @@ namespace TechAtHome
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
-
+              
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -57,6 +57,7 @@ namespace TechAtHome
                 app.UseExceptionHandler("/Home/Error");                
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -67,8 +68,7 @@ namespace TechAtHome
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             using var scope = app.ApplicationServices.CreateScope();
