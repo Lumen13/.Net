@@ -54,7 +54,7 @@ namespace TechAtHome
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");                
+                app.UseExceptionHandler("/HomePage/Error");                
                 app.UseHsts();
             }
 
@@ -68,7 +68,7 @@ namespace TechAtHome
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
+                    name: "default", pattern: "{controller=HomePage}/{action=Index}/{id?}");
             });
 
             using var scope = app.ApplicationServices.CreateScope();
