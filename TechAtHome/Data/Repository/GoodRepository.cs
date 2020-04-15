@@ -15,9 +15,9 @@ namespace TechAtHome.Data.Repository
         {
             appDBContentVariable = appDBContentField;
         }
-        public IEnumerable<GoodModel> GoodsInterface => appDBContentVariable.Db_Good.Include(c => c.GoodModel_List);
+        public IEnumerable<GoodModel> GoodsInterface => appDBContentVariable.Db_Good.Include(c => c.GoodCategory);
 
-        public IEnumerable<GoodModel> GetFavPCsInterface => appDBContentVariable.Db_Good.Where(p => p.IsFavour).Include(c => c.GoodModel_List);
+        public IEnumerable<GoodModel> GetFavPCsInterface => appDBContentVariable.Db_Good.Where(p => p.IsFavour).Include(c => c.GoodCategory);
 
         public GoodModel GetObjectPC(int Good_ID) => appDBContentVariable.Db_Good.FirstOrDefault(p => p.ID == Good_ID); 
     }

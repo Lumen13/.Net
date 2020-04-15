@@ -12,8 +12,8 @@ namespace TechAtHome.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CategoryName = table.Column<string>(nullable: true),
-                    Specification = table.Column<string>(nullable: true)
+                    CategoryName = table.Column<string>(maxLength: 150, nullable: true),
+                    Specification = table.Column<string>(maxLength: 100, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,25 +26,24 @@ namespace TechAtHome.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
-                    ShortSpec = table.Column<string>(nullable: true),
-                    LongSpec = table.Column<string>(nullable: true),
-                    Img = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(maxLength: 50, nullable: true),
+                    ShortSpec = table.Column<string>(maxLength: 150, nullable: true),
+                    LongSpec = table.Column<string>(maxLength: 500, nullable: true),
+                    Img = table.Column<string>(maxLength: 50, nullable: true),
                     Price = table.Column<decimal>(nullable: false),
                     IsFavour = table.Column<bool>(nullable: false),
                     Available = table.Column<bool>(nullable: false),
-                    CategoryNum = table.Column<int>(nullable: false),
-                    GoodModel_ListID = table.Column<int>(nullable: true)
+                    ForeignKeyCategory = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Db_Good", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Db_Good_Db_Category_GoodModel_ListID",
-                        column: x => x.GoodModel_ListID,
+                        name: "FK_Db_Good_Db_Category_ForeignKeyCategory",
+                        column: x => x.ForeignKeyCategory,
                         principalTable: "Db_Category",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,9 +68,9 @@ namespace TechAtHome.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Db_Good_GoodModel_ListID",
+                name: "IX_Db_Good_ForeignKeyCategory",
                 table: "Db_Good",
-                column: "GoodModel_ListID");
+                column: "ForeignKeyCategory");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Db_ShopCartItem_GoodModelCartID",

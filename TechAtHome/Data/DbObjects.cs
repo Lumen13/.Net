@@ -30,7 +30,7 @@ namespace TechAtHome.Data
                             Price = 30000,
                             IsFavour = true,
                             Available = true,
-                            GoodModel_List = DbObj_Categories["Стационарные ПК"]
+                            GoodCategory = DbObj_Categories["Стационарные ПК"]
                         },
                         new GoodModel
                         {
@@ -41,7 +41,7 @@ namespace TechAtHome.Data
                             Price = 21600,
                             IsFavour = true,
                             Available = true,
-                            GoodModel_List = DbObj_Categories["Ноутбуки"]
+                            GoodCategory = DbObj_Categories["Ноутбуки"]
                         },
                         new GoodModel
                         {
@@ -52,7 +52,7 @@ namespace TechAtHome.Data
                             Price = 70000,
                             IsFavour = false,
                             Available = true,
-                            GoodModel_List = DbObj_Categories["Смартфоны"]
+                            GoodCategory = DbObj_Categories["Смартфоны"]
                         },
                         new GoodModel
                         {
@@ -63,7 +63,7 @@ namespace TechAtHome.Data
                             Price = 20000,
                             IsFavour = true,
                             Available = true,
-                            GoodModel_List = DbObj_Categories["Планшеты"]
+                            GoodCategory = DbObj_Categories["Планшеты"]
                         },
                         new GoodModel
                         {
@@ -74,7 +74,7 @@ namespace TechAtHome.Data
                             Price = 120000,
                             IsFavour = true,
                             Available = true,
-                            GoodModel_List = DbObj_Categories["Смартфоны"]
+                            GoodCategory = DbObj_Categories["Смартфоны"]
                         },
                         new GoodModel
                         {
@@ -85,7 +85,7 @@ namespace TechAtHome.Data
                             Price = 85000,
                             IsFavour = true,
                             Available = true,
-                            GoodModel_List = DbObj_Categories["Планшеты"]
+                            GoodCategory = DbObj_Categories["Планшеты"]
                         }
                     );
             }

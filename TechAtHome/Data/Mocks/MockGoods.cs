@@ -25,7 +25,7 @@ namespace TechAtHome.Data.Mocks
                         Price = 30000,
                         IsFavour = true,
                         Available = true,
-                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(0)
+                        GoodCategory = _Category.AllCategoriesInterface.ElementAt(0)
                     },
                     new GoodModel
                     {
@@ -36,7 +36,7 @@ namespace TechAtHome.Data.Mocks
                         Price = 25000,
                         IsFavour = true,
                         Available = true,
-                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(1)
+                        GoodCategory = _Category.AllCategoriesInterface.ElementAt(1)
                     },
                     new GoodModel
                     {
@@ -47,7 +47,7 @@ namespace TechAtHome.Data.Mocks
                         Price = 70000,
                         IsFavour = false,
                         Available = true,
-                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(2)
+                        GoodCategory = _Category.AllCategoriesInterface.ElementAt(2)
                     },
                     new GoodModel
                     {
@@ -58,7 +58,7 @@ namespace TechAtHome.Data.Mocks
                         Price = 20000,
                         IsFavour = true,
                         Available = true,
-                        GoodModel_List = _Category.AllCategoriesInterface.ElementAt(3)
+                        GoodCategory = _Category.AllCategoriesInterface.ElementAt(3)
                     }
                 };
             }

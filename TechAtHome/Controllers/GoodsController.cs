@@ -38,22 +38,22 @@ namespace TechAtHome.Controllers
             {
                 if(string.Equals("PC", PageType, StringComparison.OrdinalIgnoreCase))
                 {
-                    goods = _AllGoodsField.GoodsInterface.Where(i => i.CategoryNum.Equals("Стационарные ПК")).OrderBy(i => i.ID);
+                    goods = _AllGoodsField.GoodsInterface.Where(i => i.GoodCategory.CategoryName.Equals("Стационарные ПК")).OrderBy(i => i.ID);
                     CurrPageType = "Стационарные ПК";
                 }
                 else if (string.Equals("Note", PageType, StringComparison.OrdinalIgnoreCase))
                 {
-                    goods = _AllGoodsField.GoodsInterface.Where(i => i.CategoryNum.Equals("Ноутбуки")).OrderBy(i => i.ID);
+                    goods = _AllGoodsField.GoodsInterface.Where(i => i.GoodCategory.CategoryName.Equals("Ноутбуки")).OrderBy(i => i.ID);
                     CurrPageType = "Ноутбуки";
                 }
                 else if (string.Equals("Phone", PageType, StringComparison.OrdinalIgnoreCase))
                 {
-                    goods = _AllGoodsField.GoodsInterface.Where(i => i.CategoryNum.Equals("Смартфоны")).OrderBy(i => i.ID);
+                    goods = _AllGoodsField.GoodsInterface.Where(i => i.GoodCategory.CategoryName.Equals("Смартфоны")).OrderBy(i => i.ID);
                     CurrPageType = "Смартфоны";
                 }
                 else if (string.Equals("Tab", PageType, StringComparison.OrdinalIgnoreCase))
                 {
-                    goods = _AllGoodsField.GoodsInterface.Where(i => i.CategoryNum.Equals("Планшеты")).OrderBy(i => i.ID);
+                    goods = _AllGoodsField.GoodsInterface.Where(i => i.GoodCategory.CategoryName.Equals("Планшеты")).OrderBy(i => i.ID);
                     CurrPageType = "Планшеты";
                 }
             }

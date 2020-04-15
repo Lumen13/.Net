@@ -10,7 +10,7 @@ using TechAtHome.Data;
 namespace TechAtHome.Migrations
 {
     [DbContext(typeof(AppDBContent))]
-    [Migration("20200413085105_Initial")]
+    [Migration("20200415174141_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,10 +29,12 @@ namespace TechAtHome.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CategoryName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
                     b.Property<string>("Specification")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.HasKey("ID");
 
@@ -49,33 +51,34 @@ namespace TechAtHome.Migrations
                     b.Property<bool>("Available")
                         .HasColumnType("bit");
 
-                    b.Property<int>("CategoryNum")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("GoodModel_ListID")
+                    b.Property<int>("ForeignKeyCategory")
                         .HasColumnType("int");
 
                     b.Property<string>("Img")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<bool>("IsFavour")
                         .HasColumnType("bit");
 
                     b.Property<string>("LongSpec")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ShortSpec")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
                     b.HasKey("ID");
 
-                    b.HasIndex("GoodModel_ListID");
+                    b.HasIndex("ForeignKeyCategory");
 
                     b.ToTable("Db_Good");
                 });
@@ -105,9 +108,11 @@ namespace TechAtHome.Migrations
 
             modelBuilder.Entity("TechAtHome.Data.Models.GoodModel", b =>
                 {
-                    b.HasOne("TechAtHome.Data.Models.CategoryModel", "GoodModel_List")
+                    b.HasOne("TechAtHome.Data.Models.CategoryModel", "GoodCategory")
                         .WithMany("CategoryModel_List")
-                        .HasForeignKey("GoodModel_ListID");
+                        .HasForeignKey("ForeignKeyCategory")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TechAtHome.Data.Models.ShopCartItem", b =>
