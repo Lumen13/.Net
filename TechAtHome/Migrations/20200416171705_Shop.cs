@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TechAtHome.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Shop : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,6 +19,24 @@ namespace TechAtHome.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Db_Category", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Order",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(maxLength: 20, nullable: false),
+                    SurName = table.Column<string>(maxLength: 20, nullable: false),
+                    Adress = table.Column<string>(maxLength: 20, nullable: false),
+                    Phone = table.Column<string>(maxLength: 10, nullable: false),
+                    Email = table.Column<string>(maxLength: 20, nullable: false),
+                    OrderTime = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Order", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -67,6 +86,33 @@ namespace TechAtHome.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "OrderDetail",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrderId = table.Column<int>(nullable: false),
+                    GoodId = table.Column<int>(nullable: false),
+                    Price = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_OrderDetail", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrderDetail_Db_Good_GoodId",
+                        column: x => x.GoodId,
+                        principalTable: "Db_Good",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_OrderDetail_Order_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Order",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Db_Good_ForeignKeyCategory",
                 table: "Db_Good",
@@ -76,6 +122,16 @@ namespace TechAtHome.Migrations
                 name: "IX_Db_ShopCartItem_GoodModelCartID",
                 table: "Db_ShopCartItem",
                 column: "GoodModelCartID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderDetail_GoodId",
+                table: "OrderDetail",
+                column: "GoodId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrderDetail_OrderId",
+                table: "OrderDetail",
+                column: "OrderId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -84,7 +140,13 @@ namespace TechAtHome.Migrations
                 name: "Db_ShopCartItem");
 
             migrationBuilder.DropTable(
+                name: "OrderDetail");
+
+            migrationBuilder.DropTable(
                 name: "Db_Good");
+
+            migrationBuilder.DropTable(
+                name: "Order");
 
             migrationBuilder.DropTable(
                 name: "Db_Category");

@@ -15,5 +15,7 @@ namespace TechAtHome.Data
         public DbSet<GoodModel> Db_Good { get; set; }
         public DbSet<CategoryModel> Db_Category { get; set; }
         public DbSet<ShopCartItem> Db_ShopCartItem { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderDetail> OrderDetail { get; set; }
     }
 }

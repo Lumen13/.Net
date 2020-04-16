@@ -27,7 +27,7 @@ using TechAtHome.Data.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c60972dc6659fb4abce4201eb45c30df8dfb2960", @"/Views/Goods/ViewList.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"57a43201da9da3109049503e2c5723129a9ca70b", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"80a81b8d3f75c99a02be5b297a547ed3acbbd68f", @"/Views/_ViewImports.cshtml")]
     public class Views_Goods_ViewList : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

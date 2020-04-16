@@ -35,6 +35,7 @@ namespace TechAtHome
 
             services.AddTransient<IGoods, GoodRepository>();
             services.AddTransient<ICategory, CategoryRepository>();            
+            services.AddTransient<IAllOrders, OrderRepository>();
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
             
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
