@@ -20,8 +20,11 @@ namespace TechAtHome.Data.Repository
 
         public void CreateOrder(Order Order)
         {
+            Order.OrderDetails = new List<OrderDetail>();
+
             Order.OrderTime = DateTime.Now;
-            appDBContent.Order.Add(Order);
+
+            //appDBContent.Order.Add(Order);
 
             var items = shopCart.ListShopItems;
 
@@ -34,8 +37,12 @@ namespace TechAtHome.Data.Repository
                     Price = el.GoodModelCart.Price
                 };
 
-                appDBContent.OrderDetail.Add(orderDetail);
+                Order.OrderDetails.Add(orderDetail);
+
+                //appDBContent.OrderDetail.Add(orderDetail);
             }
+
+            appDBContent.Order.Add(Order);
 
             appDBContent.SaveChanges(); 
         }

@@ -14,10 +14,14 @@ namespace TechAtHome.Data.Models
 
         public int OrderId { get; set; }
 
-        [ForeignKey(nameof(OrderId))]
         public int GoodId { get; set; }
+
         public decimal Price { get; set; }
-        public virtual GoodModel Good { get; set; }
-        public virtual Order Order { get; set; }
+
+        [ForeignKey(nameof(GoodId))]
+        public GoodModel Good { get; set; }
+
+        [ForeignKey(nameof(OrderId))]
+        public Order Order { get; set; }
     }
 }
